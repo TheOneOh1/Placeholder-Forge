@@ -2,9 +2,18 @@
   "name": "placeholder-forge",
   "displayName": "Placeholder Forge",
   "description": "Generate random placeholder data for testing and development",
+  "icon": "images/logo.png",
   "version": "0.0.1",
   "publisher": "AnandKore",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheOneOh1/Placeholder-Forge.git"
+  },
+  "homepage": "https://github.com/TheOneOh1/Placeholder-Forge/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/TheOneOh1/Placeholder-Forge/issues"
+  },
   "engines": {
     "vscode": "^1.95.0"
   },

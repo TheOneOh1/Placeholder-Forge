@@ -1,0 +1,108 @@
+{
+  "name": "placeholder-forge",
+  "displayName": "Placeholder Forge",
+  "description": "Generate random placeholder data for testing and development",
+  "version": "0.0.1",
+  "publisher": "AnandKore",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "placeholder-generator.generateName",
+        "title": "Generate Random Name"
+      },
+      {
+        "command": "placeholder-generator.generateEmail",
+        "title": "Generate Random Email"
+      },
+      {
+        "command": "placeholder-generator.generatePhone",
+        "title": "Generate Random Phone Number"
+      },
+      {
+        "command": "placeholder-generator.generateAddress",
+        "title": "Generate Random Address"
+      },
+      {
+        "command": "placeholder-generator.generateCompany",
+        "title": "Generate Random Company"
+      },
+      {
+        "command": "placeholder-generator.generateBank",
+        "title": "Generate Random Bank"
+      },
+      {
+        "command": "placeholder-generator.generateLorem",
+        "title": "Generate Lorem Ipsum"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "submenu": "placeholder-generator.menu",
+          "group": "placeholder-generator"
+        }
+      ],
+      "placeholder-generator.menu": [
+        {
+          "command": "placeholder-generator.generateName",
+          "group": "1_personal"
+        },
+        {
+          "command": "placeholder-generator.generateEmail",
+          "group": "1_personal"
+        },
+        {
+          "command": "placeholder-generator.generatePhone",
+          "group": "1_personal"
+        },
+        {
+          "command": "placeholder-generator.generateAddress",
+          "group": "2_location"
+        },
+        {
+          "command": "placeholder-generator.generateCompany",
+          "group": "3_business"
+        },
+        {
+          "command": "placeholder-generator.generateBank",
+          "group": "3_business"
+        },
+        {
+          "command": "placeholder-generator.generateLorem",
+          "group": "4_text"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "placeholder-generator.menu",
+        "label": "Generate Placeholder Data"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^16.0.0",
+    "@types/vscode": "^1.80.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1"
+  }
+}
